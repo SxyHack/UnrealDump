@@ -58,8 +58,8 @@ void OffsetInit()
 	Offset["AActor"].push_back("RootComponent");
 	Offset["USceneComponent"].push_back("ComponentVelocity");
 	Offset["USceneComponent"].push_back("RelativeRotation");
-	Offset["ATslCharacter"].push_back("Health");
 	Offset["ACharacter"].push_back("Mesh");
+	Offset["ATslCharacter"].push_back("Health");
 	Offset["ATslCharacter"].push_back("CharacterName");
 	Offset["ATslCharacter"].push_back("GroggyHealth");
 	Offset["ATslCharacter"].push_back("SpectatedCount");
@@ -131,9 +131,8 @@ void OnStart()
 }
 int main()
 {
-
-	auto hWnd = FindWindowA("UnrealWindow", "绝地求生 ");
-	DWORD Pid = 0;
+	auto hWnd = FindWindowA("UnrealWindow", "绝地求生");
+	DWORD Pid = 22804;
 	GetWindowThreadProcessId(hWnd, &Pid);
 	Process::Attach(Pid);
 	thread(OnStart).join();

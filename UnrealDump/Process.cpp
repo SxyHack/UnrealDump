@@ -98,7 +98,7 @@ DWORD_PTR Process::XeDecryption(DWORD_PTR p)
 			ShellcodeBuff[6] = 0x90;
 			ShellcodeBuff[7] = 0x90;
 			ShellcodeBuff[8] = 0x90;
-			DecFunction =reinterpret_cast<decltype(DecFunction)> (VirtualAlloc(nullptr, 4096, MEM_RESERVE | MEM_COMMIT, PAGE_EXECUTE_READWRITE));
+			DecFunction = reinterpret_cast<decltype(DecFunction)>(VirtualAlloc(nullptr, 4096, MEM_RESERVE | MEM_COMMIT, PAGE_EXECUTE_READWRITE));
 			RtlCopyMemory((LPVOID)DecFunction, (LPVOID)ShellcodeBuff, sizeof(ShellcodeBuff));
 		}
 
